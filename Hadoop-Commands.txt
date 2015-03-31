@@ -1,0 +1,18 @@
+Dir:
+
+sam@ubuntu:~$ hadoop fs -mkdir /AvgTemp/Monthly/Input
+sam@ubuntu:~$ hadoop fs -mkdir /AvgTemp/Seasonaly/Input
+sam@ubuntu:~$ hadoop fs -mkdir /AvgTemp/Yearly/Input
+
+Copy File to hdfs:
+
+sam@ubuntu:~$ hadoop fs -put workspace/AvgTempNOAA/Sam/Input/406910.csv /AvgTemp/Monthly/Input/
+sam@ubuntu:~$ hadoop fs -put workspace/AvgTempNOAA/Sam/Input/406910.csv /AvgTemp/Seasonaly/Input/
+sam@ubuntu:~$ hadoop fs -put workspace/AvgTempNOAA/Sam/Input/406910.csv /AvgTemp/Yearly/Input/
+
+
+Copy File from hdfs:
+
+sam@ubuntu:~$ hadoop fs -get /AvgTemp/Monthly/Output/part-00000 workspace/Sam/Output
+sam@ubuntu:~$ hadoop fs -get /AvgTemp/Yearly/Output/part-00000 workspace/Sam/Output
+sam@ubuntu:~$ hadoop fs -get /AvgTemp/Seasonaly/Output/part-00000 workspace/Sam/Output
